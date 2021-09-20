@@ -1,0 +1,6 @@
+Data Peserta Sanbercode Bootcamp ReactJS
+1. Nama: Syukriyatul Hanifa
+2. Email: syukriyatul_hanifa@apps.ipb.ac.id
+3. Sistem Operasi yang digunakan: Ubuntu
+4. Akun Gitlab/Github: syukriyatulhanifa (github)
+5. Akun Telegram: hnftul
