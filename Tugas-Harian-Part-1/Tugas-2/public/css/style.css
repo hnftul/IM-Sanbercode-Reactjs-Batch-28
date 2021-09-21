@@ -1,0 +1,70 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background: url("pattern.jpg");
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 8px black;
+}
+
+img{
+    float:left;
+    margin: 0;
+    padding: 10px 20px;
+}
+ul{ 
+    padding: 10px 20px;
+    float: right;
+}
+li{
+    margin: 10px;
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    max-width: 1100px;
+    margin: auto;
+    background-color: white;
+    margin-top:100px;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+#article-list{
+    padding: 20px 40px;
+}
+
+h3{
+    padding-top: 30px;
+}
+
+footer{
+    position: sticky;
+    padding: 5px 0px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+}
+
+h5{
+    text-align: center;
+    color: white;
+}

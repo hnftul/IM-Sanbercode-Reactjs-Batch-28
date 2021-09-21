@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <style type="text/css">
+            #box{
+                border: 1px solid black; 
+                padding: 10px 0px;
+            }
+            #buttonhome{
+                padding:20px 0px;
+            }
+            h1{
+                font-size: 2em;
+                text-align: center; 
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+            input{
+                margin-left: 100px;
+                margin-bottom: 10px;
+            }
+            th{
+                vertical-align: top;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section id="box">
+                <h1>Hubungi Kami</h1>
+                <div style="padding: 5px 20px">
+                    <p><b>Kantor: </b>Jl. Siti Nurbaya No. 34</p>
+                    <p><b>Nomor Telepon: </b>+62-8333-8888</p>
+                    <p><b>Email: </b>syukriyatul_hanifa@apps.ipb.ac.id</p>
+                </div>
+                <h1>Kirimkan Pesan</h1>
+                <div style="padding: 5px 20px">
+                    <form action="">
+                        <table>
+                            <tr>
+                                <th><label for="nama">Nama</label></th>
+                                <td><input type="text" id="nama" name="nama"></td>
+                            </tr>
+                            <tr>
+                                <th><label for="email">Email</label></th>
+                                <td><input type="text" id="email" name="email"></td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Kelamin</th>
+                                <td>
+                                    <input type="radio" id="jenkel" name="jenkel" value="Laki-laki">
+                                    <label for="laki-laki">Laki-laki</label><br>
+                                    <input type="radio" id="pr" name="jenkel" value="Perempuan">
+                                    <label for="pr">Perempuan</label><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="pesan">Pesan Anda</label></th>
+                                <td>
+                                    <textarea id="pesan" name="pesan" rows="5" cols="50" style="margin-left: 100px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Kirim", style="margin:0px">
+                                </td>
+                            </tr>  
+                        </table>
+                    </form>     
+                </div>
+            </section>
+            <section id="buttonhome">
+                <button type="button"><a href="index.html" style="text-decoration: none;">Kembali ke Index</a></button>
+            </section>
+        </main>
+    </body>
+
+    
+</html>
