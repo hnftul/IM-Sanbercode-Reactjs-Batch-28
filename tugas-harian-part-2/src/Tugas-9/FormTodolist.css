@@ -1,0 +1,54 @@
+.container {
+    max-width: 350px;
+    border-radius: 3px;
+    box-shadow: 0px 10px 20px #cfcfcf;
+    margin: auto;
+    padding: 25px;
+    margin-top:50px;
+}
+
+.title {
+    padding: 0 0 10px 0;
+    border-bottom: 3px solid gray;
+}
+.title h1 {
+    margin: 10px 0 5px 0;
+    color: grey;
+    font-weight:400;
+}
+
+.title p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.list ul{
+    padding: 0;
+}
+
+.list ul li {
+    list-style-type: none;
+    padding: 15px 0;
+    border-bottom: 2px solid gray;
+}
+
+.list label {
+    margin-left: 10px;
+}
+
+.list button {
+    width: 100%;
+    border: solid 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px;
+    background-color:dodgerblue;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+}
+
+.list button:active {
+    background-color:firebrick;
+}
+  
