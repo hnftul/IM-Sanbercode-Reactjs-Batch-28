@@ -1,9 +1,10 @@
 import './App.css';
-import FormTodolist from './Tugas-9/FormTodolist';
+import Tugas9 from './Tugas-9/tugas9.';
+import Tugas10 from './Tugas-10/tugas10';
 
 function App() {
   return (
-    <FormTodolist/>
+    <><Tugas10 /><Tugas9/></>
   );
 }
 
