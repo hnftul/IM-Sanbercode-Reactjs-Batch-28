@@ -1,0 +1,96 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;    
+}
+
+.container {
+    max-width: 900px;
+    border-radius: 3px;
+    box-shadow: 0px 10px 20px #cfcfcf;
+    margin: auto;
+    padding: 40px;
+    margin-top:50px;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.title {
+    padding: 0px 0 20px 0;
+}
+.title h1 {
+    margin: 0;
+    color: black;
+    font-weight:400;
+    text-align: center;
+}
+
+table {
+    width: 900px;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #ddd;
+}
+  
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: gray;
+    color: white;
+}
+
+button{
+    margin: 0 10px;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#edit{
+    background-color: dodgerblue
+}
+
+#edit:hover{
+    background-color: rgb(3, 97, 190)
+}
+
+#delete{
+    background-color: rgb(197, 38, 38)
+}
+
+#delete:hover{
+    background-color: rgb(138, 13, 13)
+}
+
+#submit{
+    background-color: seagreen;
+    margin: 10px 0 0 0; 
+    width: 150px;
+}
+
+#submit:hover{
+    background-color: rgb(30, 116, 67);
+}
+
+label{
+    display: inline-block;
+    width: 700px;
+}
+
+input{
+    display: inline-block;
+    margin: 10px 0 10px 10px;
+    border: 1px solid #ddd;
+    height: 20px;
+}
+
+  
