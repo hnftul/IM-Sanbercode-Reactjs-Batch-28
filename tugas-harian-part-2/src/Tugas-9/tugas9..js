@@ -9,13 +9,13 @@ function ListThings(props){
 
 function ToDoList(){
   return(
-    <div className="container">
+    <div className="container1">
       <div className="title">
         <img src={logo} alt="logo" />
         <h1>THINGS TO DO</h1>
         <p>During bootcamp in sanbercode</p>
       </div>
-      <div class = "list">
+      <div className = "list">
         <ul>
           <li><ListThings name = "Belajar GIT & CLI" /></li>
           <li><ListThings name = "Belajar HTML & CSS" /></li>

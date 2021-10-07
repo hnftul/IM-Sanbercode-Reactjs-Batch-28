@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import { createContext } from "react/cjs/react.development";
 import axios from "axios"
+import { useHistory } from "react-router";
 
 export const DaftarNilaiContext = createContext()
 
 export const DaftarNilaiProvider = props => {
+    let history = useHistory()
     const [daftarNilai, setDaftarNilai] = useState([])
     const [inputData, setInputData] = useState({
         id: 0,
@@ -45,6 +47,7 @@ export const DaftarNilaiProvider = props => {
                     score: data.score
                 }
             ])
+            history.push("/tugas14")
         })
     }
 
@@ -58,8 +61,8 @@ export const DaftarNilaiProvider = props => {
             let singleMahasiswa = daftarNilai.find(el => el.id === currentId)
             singleMahasiswa.name = inputData.name
             singleMahasiswa.course = inputData.course
-            singleMahasiswa.score = inputData.score
-            setDaftarNilai([...daftarNilai]) 
+            singleMahasiswa.score = inputData.score 
+            history.push("/tugas14")       
         })
     }
 
@@ -71,12 +74,23 @@ export const DaftarNilaiProvider = props => {
             setCurrentId(data.id)
         })
     }
+
+    const fetchById = (idMahasiswa) => {
+        axios.get(`http://backendexample.sanbercloud.com/api/student-scores/${idMahasiswa}`)
+        .then(res => {
+            let data = res.data
+            setInputData(data)
+            setCurrentId(data.id)
+        })
+    }
+
     const functions = {
         fetch,
         functionDelete,
         functionSubmit,
         functionUpdate,
-        functionEdit
+        functionEdit,
+        fetchById
     }
     return(
         <DaftarNilaiContext.Provider value = {{
@@ -92,7 +106,8 @@ export const DaftarNilaiProvider = props => {
             functionDelete,
             functionSubmit,
             functionUpdate,
-            functionEdit
+            functionEdit,
+            fetchById
         }}>
 
             {props.children}

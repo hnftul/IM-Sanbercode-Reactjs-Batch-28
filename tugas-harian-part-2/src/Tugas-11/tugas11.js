@@ -68,7 +68,7 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <div className="title">
+        <div className="titles">
           <h1>Daftar Harga Buah</h1>
         </div>
         <table>
@@ -104,7 +104,7 @@ const App = () => {
         </table>
       </div>
       <div className="container" style={{backgroundColor: '#f2f2f2'}}>
-        <div className="title">
+        <div className="titles">
           <h1>Form Daftar Harga Buah</h1>
         </div> 
         <form onSubmit={handleSubmit}>

@@ -10,15 +10,15 @@ table, th, td {
     box-shadow: 0px 10px 20px #cfcfcf;
     margin: auto;
     padding: 40px;
-    margin-top:50px;
+    margin-top:30px;
     overflow: auto;
     max-height: 400px;
 }
 
-.title {
+.titles {
     padding: 0px 0 20px 0;
 }
-.title h1 {
+.titles h1 {
     margin: 0;
     color: black;
     font-weight:400;
@@ -81,12 +81,12 @@ button{
     background-color: rgb(30, 116, 67);
 }
 
-label{
+form label{
     display: inline-block;
-    width: 700px;
+    width: 721px;
 }
 
-input{
+form input{
     display: inline-block;
     margin: 10px 0 10px 10px;
     border: 1px solid #ddd;

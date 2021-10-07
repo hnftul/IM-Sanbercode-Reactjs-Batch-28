@@ -112,7 +112,7 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <div className="title">
+        <div className="titles">
           <h1>Daftar Nilai Mahasiswa</h1>
         </div>
         <table>
@@ -152,7 +152,7 @@ const App = () => {
         </table>
       </div>
       <div className="container" style={{backgroundColor: '#f2f2f2'}}>
-        <div className="title">
+        <div className="titles">
           <h1>Form Nilai Mahasiswa</h1>
         </div> 
         <form onSubmit={handleSubmit}>
@@ -163,7 +163,7 @@ const App = () => {
           <input required type="text" name="course" value={inputData.course} onChange={handleChange} />
 
           <label htmlFor="score">Nilai:</label>
-          <input max ={100} min = {0} style={{width:'177px'}}required type="number" name="score" value={inputData.score} onChange={handleChange} />
+          <input max ={100} min = {0} style={{width:'163px'}}required type="number" name="score" value={inputData.score} onChange={handleChange} />
 
           <br></br>
           <div style={{textAlign:'center'}}>

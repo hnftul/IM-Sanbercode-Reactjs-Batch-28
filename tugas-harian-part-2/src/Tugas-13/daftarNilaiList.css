@@ -10,15 +10,26 @@ table, th, td {
     box-shadow: 0px 10px 20px #cfcfcf;
     margin: auto;
     padding: 40px;
-    margin-top:50px;
+    margin-top:30px;
     overflow: auto;
     max-height: 400px;
 }
 
-.title {
+#container {
+    max-width: 900px;
+    border-radius: 3px;
+    box-shadow: 0px 10px 20px #cfcfcf;
+    margin: auto;
+    padding: 40px;
+    margin-top:30px;
+    overflow: auto;
+    max-height: 570px;
+}
+
+.titles {
     padding: 0px 0 20px 0;
 }
-.title h1 {
+.titles h1 {
     margin: 0;
     color: black;
     font-weight:400;
@@ -75,22 +86,40 @@ button{
     background-color: seagreen;
     margin: 10px 0 0 0; 
     width: 150px;
+    margin:10px;
 }
 
 #submit:hover{
     background-color: rgb(30, 116, 67);
 }
 
-label{
+#back{
+    background-color: rgb(197, 38, 38);
+    margin: 10px 0 0 0; 
+    width: 150px;
+    margin:10px;
+}
+
+#back:hover{
+    background-color: rgb(138, 13, 13);
+}
+form label{
     display: inline-block;
     width: 700px;
 }
 
-input{
+form input{
     display: inline-block;
     margin: 10px 0 10px 10px;
     border: 1px solid #ddd;
     height: 20px;
+}
+
+#link{
+    background-color: seagreen;
+    margin: auto;
+    width: 100px;
+    margin-bottom: 20px;
 }
 
   

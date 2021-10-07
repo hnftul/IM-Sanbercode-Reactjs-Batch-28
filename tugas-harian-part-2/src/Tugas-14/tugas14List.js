@@ -1,10 +1,13 @@
 import React, { useContext, useEffect } from "react"
-import './daftarNilaiList.css'
-import { DaftarNilaiContext } from "./daftarNilaiContext"
+import '../Tugas-13/daftarNilaiList.css'
+import { DaftarNilaiContext } from "../Tugas-13/daftarNilaiContext"
+import { Link } from "react-router-dom"
+import { useHistory } from "react-router"
 
-const DaftarNilaiList = () => {
+const Tugas14List = () => {
   
-  const { daftarNilai, fetchStatus, setFetchStatus, functions} = useContext(DaftarNilaiContext)
+  let history = useHistory()
+  const { daftarNilai, fetchStatus, setInputData, setFetchStatus, functions} = useContext(DaftarNilaiContext)
   const { fetch, functionDelete, functionEdit} = functions
 
   useEffect(()=>{
@@ -12,7 +15,14 @@ const DaftarNilaiList = () => {
       fetch()
       setFetchStatus(false)
     }
-  },[fetch, fetchStatus, setFetchStatus])
+    return() => {
+      setInputData({
+        name: "",
+        course: "",
+        score: 0
+      })
+    }
+  },[fetchStatus, setFetchStatus])
 
   const handleDelete = (event) => {
     let idMahasiswa = parseInt(event.target.value)
@@ -22,6 +32,7 @@ const DaftarNilaiList = () => {
   const handleEdit = (event) => {
     let idMahasiswa = parseInt(event.target.value)
     functionEdit(idMahasiswa)
+    history.push(`/tugas14/form/${idMahasiswa}`)
   }
 
   const indexNilai = (score) => {
@@ -40,10 +51,11 @@ const DaftarNilaiList = () => {
 
   return (
     <>
-      <div className="container">
+      <div id="container">
         <div className="titles">
           <h1>Daftar Nilai Mahasiswa</h1>
         </div>
+        <Link to="/tugas14/form"><button id="link">Create Data</button></Link> 
         <table>
           <thead>
             <tr>
@@ -84,4 +96,4 @@ const DaftarNilaiList = () => {
   )
 }
 
-export default DaftarNilaiList
+export default Tugas14List

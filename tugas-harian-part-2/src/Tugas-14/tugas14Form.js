@@ -1,11 +1,20 @@
-import React, { useContext } from "react"
-import { DaftarNilaiContext } from "./daftarNilaiContext"
-import './daftarNilaiList.css'
+import React, { useContext, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { useParams } from "react-router"
+import { DaftarNilaiContext } from "../Tugas-13/daftarNilaiContext"
+import '../Tugas-13/daftarNilaiList.css'
 
-const DaftarNilaiForm = () => {
+const Tugas14Form = () => {
 
+    let {slug} = useParams()
     const { inputData, setInputData, currentId, setCurrentId, functions} = useContext(DaftarNilaiContext)
-    const { functionSubmit, functionUpdate} = functions
+    const { functionSubmit, functionUpdate, fetchById} = functions
+
+    useEffect(()=>{
+        if (slug !== undefined){
+            fetchById(slug)
+        } 
+    },[])
 
     const handleChange = (event) => {
         let value = event.target.value
@@ -48,10 +57,12 @@ const DaftarNilaiForm = () => {
                 <br></br>
                 <div style={{textAlign:'center'}}>
                     <button id="submit">SUBMIT</button>
+                    <Link to="/tugas14"><button id="back">KEMBALI</button></Link> 
+                    
                 </div>
             </form> 
         </div>
     )
 }
 
-export default DaftarNilaiForm
+export default Tugas14Form

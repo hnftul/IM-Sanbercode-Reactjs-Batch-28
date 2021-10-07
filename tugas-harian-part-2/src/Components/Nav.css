@@ -1,0 +1,56 @@
+.light-nav {
+    border-bottom: 2px solid rgb(129, 129, 129);
+    padding: 20px 0px;
+}
+
+.light-nav ul{ 
+    padding: 0;
+    margin: 0;
+    
+}
+
+.light-nav ul li{
+    display: inline;
+    text-decoration: none;
+    padding:20px; 
+    margin: 10px 0;  
+}
+
+.light-nav ul li:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.light-nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+}
+
+.dark-nav {
+    border-bottom: 2px solid black;
+    padding: 20px 0px;
+    background-color: rgb(32, 32, 32);
+}
+
+.dark-nav ul{ 
+    padding: 0;
+    margin: 0;   
+}
+
+.dark-nav ul li{
+    display: inline;
+    text-decoration: none;
+    padding:20px; 
+    margin: 10px 0;  
+}
+
+.dark-nav ul li:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+.dark-nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+
