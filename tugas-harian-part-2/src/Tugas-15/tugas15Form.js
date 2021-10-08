@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 import { useParams } from "react-router"
 import { DaftarNilaiContext } from "../Tugas-13/daftarNilaiContext"
 import '../Tugas-13/daftarNilaiList.css'
+import { message } from 'antd';
 
-const Tugas14Form = () => {
+const Tugas15Form = () => {
 
     let {slug} = useParams()
     const { inputData, setInputData, currentId, setCurrentId, functions} = useContext(DaftarNilaiContext)
@@ -27,8 +28,10 @@ const Tugas14Form = () => {
         
         if (currentId === null){
           functionSubmit()
+          message.success('Data Berhasil Ditambah', 3);
         } else {
           functionUpdate()
+          message.success('Data Berhasil Diubah', 3);
         }
         setInputData({
             id: 0,
@@ -57,12 +60,11 @@ const Tugas14Form = () => {
                 <br></br>
                 <div style={{textAlign:'center'}}>
                     <button id="submit">SUBMIT</button>
-                    <Link to="/tugas14"><button id="back">KEMBALI</button></Link> 
-                    
+                    <Link to="/tugas15"><button id="back">KEMBALI</button></Link> 
                 </div>
             </form> 
         </div>
     )
 }
 
-export default Tugas14Form
+export default Tugas15Form

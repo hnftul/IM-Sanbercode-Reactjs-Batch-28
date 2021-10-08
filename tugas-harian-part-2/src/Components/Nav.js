@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom"
 import { ThemeContext } from "../Tugas-14/ThemeContext";
 import './Nav.css'
-
+import ButtonSwitchTheme from "./ButtonSwitchTheme";
 
 const Nav = () => {
     
@@ -31,6 +31,12 @@ const Nav = () => {
               <li>
                 <Link to="/tugas14">Tugas 14</Link>
               </li>
+              <li>
+                <Link to="/tugas15">Tugas 15</Link>
+              </li>
+              <div style={{margin: "0px 30px", float:'right'}}>
+                  <ButtonSwitchTheme/>
+              </div>
             </ul>
         </nav>
     )

@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { ThemeContext } from "../Tugas-14/ThemeContext";
+import { Switch } from 'antd';
 
 const ButtonSwitchTheme = () => {
     const {theme, setTheme} = useContext(ThemeContext)
@@ -8,11 +9,11 @@ const ButtonSwitchTheme = () => {
     }
 
     return(
-        <div style={{marginTop:'20px', textAlign: 'center'}}>
-            <button style={{width:'200px', backgroundColor: 'gray'}}
+        <div style={{marginTop:'0px', textAlign: 'center'}}>
+            <Switch defaultChecked style={{width:'10px', backgroundColor: 'gray'}}
                 onClick={handleClick}>
                 Change colour
-            </button>
+            </Switch>
         </div>   
     )
 }

@@ -20,8 +20,23 @@ export const DaftarNilaiProvider = props => {
     const fetch = async () => {
         const result = await axios.get(`http://backendexample.sanbercloud.com/api/student-scores`)
         setDaftarNilai(result.data.map(x => {
-            return {id: x.id, name: x.name, course: x.course, score: x.score}
+            return {id: x.id, name: x.name, course: x.course, score: x.score, indexnilai: getScore(x.score)}
         }))
+
+    }
+
+    const getScore = (score) => {
+        if (score >= 80){
+            return 'A'
+        } else if (score < 80 && score >= 70){
+            return 'B'
+        } else if (score < 70 && score >= 60){
+            return 'C'
+        } else if (score < 60 && score >= 50){
+            return 'D'
+        } else if (score < 50){
+            return 'E'
+        }
     }
 
     const functionDelete = (params) => {
@@ -47,7 +62,7 @@ export const DaftarNilaiProvider = props => {
                     score: data.score
                 }
             ])
-            history.push("/tugas14")
+            history.push("/tugas15")
         })
     }
 
@@ -62,7 +77,7 @@ export const DaftarNilaiProvider = props => {
             singleMahasiswa.name = inputData.name
             singleMahasiswa.course = inputData.course
             singleMahasiswa.score = inputData.score 
-            history.push("/tugas14")       
+            history.push("/tugas15")       
         })
     }
 
@@ -86,6 +101,7 @@ export const DaftarNilaiProvider = props => {
 
     const functions = {
         fetch,
+        getScore,
         functionDelete,
         functionSubmit,
         functionUpdate,
@@ -103,6 +119,7 @@ export const DaftarNilaiProvider = props => {
             fetchStatus,
             setFetchStatus,
             functions,
+            getScore,
             functionDelete,
             functionSubmit,
             functionUpdate,

@@ -3,12 +3,13 @@ import '../Tugas-13/daftarNilaiList.css'
 import { DaftarNilaiContext } from "../Tugas-13/daftarNilaiContext"
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router"
+import { Button } from 'antd'
 
 const Tugas14List = () => {
   
   let history = useHistory()
   const { daftarNilai, fetchStatus, setInputData, setFetchStatus, functions} = useContext(DaftarNilaiContext)
-  const { fetch, functionDelete, functionEdit} = functions
+  const { fetch, functionDelete, functionEdit, getScore} = functions
 
   useEffect(()=>{
     if(fetchStatus){
@@ -36,17 +37,7 @@ const Tugas14List = () => {
   }
 
   const indexNilai = (score) => {
-    if (score >= 80){
-        return 'A'
-    } else if (score < 80 && score >= 70){
-        return 'B'
-    } else if (score < 70 && score >= 60){
-        return 'C'
-    } else if (score < 60 && score >= 50){
-        return 'D'
-    } else if (score < 50){
-        return 'E'
-    }
+    getScore(score)
   }
 
   return (
@@ -78,7 +69,7 @@ const Tugas14List = () => {
                         <td>{val.name}</td>
                         <td>{val.course}</td>
                         <td>{val.score}</td>
-                        <td>{indexNilai(val.score)}</td>
+                        <td>{getScore(val.score)}</td>
                         <td>
                           <button id="edit" onClick={handleEdit} value={val.id}>Edit</button>
                           <button id="delete" onClick={handleDelete} value={val.id}>Delete</button>

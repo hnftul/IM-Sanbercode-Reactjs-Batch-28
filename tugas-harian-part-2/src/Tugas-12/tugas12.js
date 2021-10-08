@@ -163,7 +163,7 @@ const App = () => {
           <input required type="text" name="course" value={inputData.course} onChange={handleChange} />
 
           <label htmlFor="score">Nilai:</label>
-          <input max ={100} min = {0} style={{width:'163px'}}required type="number" name="score" value={inputData.score} onChange={handleChange} />
+          <input max ={100} min = {0} style={{width:'187px'}}required type="number" name="score" value={inputData.score} onChange={handleChange} />
 
           <br></br>
           <div style={{textAlign:'center'}}>
