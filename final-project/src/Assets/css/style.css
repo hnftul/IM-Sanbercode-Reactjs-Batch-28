@@ -1,0 +1,542 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0;
+    top:0;
+    padding:0;
+    background-color: rgb(0, 21, 41);
+}
+
+body{
+    width: 100%;
+    background-color: #0c111b;
+    position: relative;
+    font-family: roboto, sans-serif;
+    height: 100%;
+    min-height: 100vh;   
+}
+
+/* Banner */
+.carousel-container{    
+    position: relative;
+    width: 100%;
+    height: 550px;
+    margin-top: 30px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-containers{    
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin-top: 30px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+}
+.carousel-container::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel{
+    display: flex;
+    width: 92%;
+    height: 550px;
+    position: relative;
+    margin: auto;
+    
+}
+
+.carousels{
+    display: flex;
+    width: 92%;
+    height: 700px;
+    position: relative;
+    margin: auto;
+    
+}
+
+
+.slider{
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgba(0, 0, 0,0.5);
+    border-radius: 5px;
+    width: 100%;
+    max-height: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+
+}
+
+.slider img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.slide-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 82%, #0c111b00);
+    color: #fff;
+    padding: 2% 14% 0 5%;
+}
+
+.movie-title{
+    margin-top:6%;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+
+/* Movie List */
+
+.movies-list{
+    width: 100%;
+    position: relative;
+    padding: 0px ;
+    display: inline;
+}
+
+.card-container{
+    position: relative;
+    width: 100%;
+    padding-left: 4%;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    display: flex;
+    height: 365px;
+}
+
+.scroll{
+    opacity: 0;
+    bottom: 180px;
+    position: fixed;
+    right:10px;
+    color:white;
+    font:bold;
+    font-size: 20px;
+}
+
+.card-container:hover .scroll{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    position: relative;
+    min-width: 200px;
+    width: 200px;
+    height: 280px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 18px;
+    transition: .5s;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover{
+    transform: scale(1.3);
+    z-index: 1;
+}
+
+.card:hover .card-body{
+    opacity: 1;
+}
+
+.card-body{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 85%);
+    padding: 10px;
+    transition: 0.5s;
+    text-align: left;
+}
+
+.name{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.des{
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 9px;
+}
+
+.title{
+    color: #fff;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 4%;
+
+}
+
+.title-movie{
+    color: #fff;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.container {
+    max-width: 1400px;
+    border-radius: 3px;
+    margin: auto;
+}
+
+
+/* table */
+
+table{
+    color: white;
+}
+tr{
+    background-color: #1c2940;
+}
+
+thead[class*="ant-table-thead"] th{
+    background-color: #0f1c31 !important;
+    color: white !important;
+    border: none;
+}
+
+thead[class*="ant-table-thead"] th:hover{
+    background-color: rgb(21, 35, 59) !important;
+}
+
+.ant-table-thead>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td, 
+.ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row)>td, 
+.ant-table-thead>tr:hover:not(.ant-table-expanded-row)>td, 
+.ant-table-tbody>tr:hover:not(.ant-table-expanded-row)>td {
+    background-color: #111e33  !important;
+}
+
+.ant-table-thead>tr.ant-table-row>td, 
+.ant-table-tbody>tr.ant-table-row>td, 
+.ant-table-thead>tr>th, 
+.ant-table-tbody>tr>td {
+    border: 1px solid#26344b  !important;
+}
+
+.ant-table-column-sort{
+    background-color: rgb(21, 35, 59) !important;
+}
+ 
+.form-data{
+    width: 100%;
+    padding: 0px 10%;
+}
+
+.form-data input {
+    margin-left: 0; 
+    width: 100%;
+    height:50px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #26344b;
+    margin-top: 10px;
+    background-color: unset;
+    color: white;
+}
+
+.form-data label{
+    color: white;
+    display: block;
+    font-weight: bold; 
+}
+
+.form-data textarea{
+    margin-left: 0;
+    width: 100%;
+    height:100px;
+    border: 3px solid #26344b;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: unset;
+    color: white;
+    outline: none;
+    margin-top:10px
+}
+
+.left{
+    float:left;
+    width: 45%;
+}
+
+.right{
+    float:right;
+    width: 45%;
+}
+
+.card-login{
+    margin:0 auto;
+    width: 1100px;
+    height: 600px;
+    overflow-x: hidden;
+    margin-top: 50px;
+    background-color: #0c111b;
+    border-radius: 10px;
+    margin-top:120px;
+    overflow-y: hidden;
+    
+}
+
+.card-login form {
+    width: 50%; 
+    padding:8% 5%;
+    float: right;
+}
+
+.wallpaper{
+    position: relative;
+    float:left;
+    width: 50%;
+    height: 100%;
+}
+.gambar{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gambartulisan{
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:  #192133;
+    padding: 10px;
+    transition: 0.5s;
+    text-align: left;   
+    padding:12% 9%;
+}
+
+.card-login h1{
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+}
+
+.gambartulisan p{
+    font-weight: bold;
+    color: white;
+}
+.gambartulisan button{
+    width: 100px;
+    padding: 10px;
+    margin-right: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0c111b;
+}
+
+form button{
+    width: 100%;
+    height:50px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #26344b;
+    margin-top: 10px;
+    background-color: unset;
+    color: white;
+    cursor: pointer;
+    background-color: #192133
+}
+
+/* LOGIN FORM */
+
+.login-input{
+    height:50px;
+    border-radius: 5px !important;
+    border: 3px solid #26344b !important;
+    background-color: unset !important;
+    color: white !important;
+}
+
+.card-login form input{
+    background-color: unset;
+    color: white !important;
+
+}
+
+.card-login form input::before{
+    background-color: unset;
+    color: white !important;
+
+}
+.card-login form label{
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.ant-input-suffix>span{
+    padding-bottom: 13px;
+    color: white;
+}
+
+.ant-input-suffix>span:hover{
+    color: white;
+}
+
+
+.ant-input{
+    background-color: unset !important;
+}
+
+.logo{
+    width: 100px;
+    vertical-align: middle;
+    border-style: none;
+    position: relative;
+    margin-left: 1%;
+    margin-top: 22px
+}
+
+
+/* .card-detail{    
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow-x: hidden;
+    margin-top: 30px;
+} */
+
+.detail-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 82%, #0c111b00);
+    color: #fff;
+    padding: 0 5% 0 0;
+}
+
+/* Landing Page */
+
+.landing{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to top right, rgb(0, 21, 41), 90%, #0c111b00);
+    color: #fff;
+    padding: 300px 40% 0px 8%;
+}
+
+.landing h1{
+    color: #fff;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.filter-input {
+    width: '200px';
+    margin-right: 30px;
+    margin-left: 0; 
+    height:54px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #26344b;
+    margin-top: 10px;
+    background-color: unset;
+    color: white;
+}
+
+span[class*='ant-input-wrapper ant-input-group']{
+    background-color: unset;
+    border: 3px solid #26344b;
+    color: white !important;
+    border-radius: 5px;
+}
+span[class*='ant-input-wrapper ant-input-group'] span{
+    background-color: unset;
+    height: 47px;   
+    border: none;
+}
+
+span[class*='ant-input-affix-wrapper'] input{
+    color: white;
+    border: 2px solid #26344b;
+}
+
+span[class*='ant-input-suffix'] span{
+    color: white !important;
+    padding-top: 14px;
+}
+
+span[class*='ant-input-group-addon'] button{
+    color: white !important;
+    background-color: #26344b!important;
+    border: none !important;
+    height: 49px !important;
+    padding-top:15px !important;
+    width: 45px;
+    margin-right: -2px;
+    margin-top: -1px;
+}
+
+footer {
+    background: linear-gradient(to top, rgb(1, 0, 5), 50%, rgb(0, 21, 41) ) !important
+}
+ 
