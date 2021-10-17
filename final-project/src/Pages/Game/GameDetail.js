@@ -23,14 +23,15 @@ const MobileDetail = () => {
     },[])
 
     const mode  = (single, multi) => {
-        if (single === 1){
+        if (single === 1 && multi === 0){
             return 'Single Player'
-        } else if (multi === 1){
+        } else if (multi === 1 && single === 0){
             return 'Multiplayer'
-        } else if (single === 0 && multi === 0){
+        } else if (single === 1 && multi === 1){
             return 'Single Player and Multiplayer'
         }
     }
+    
   return (
 
     <>
