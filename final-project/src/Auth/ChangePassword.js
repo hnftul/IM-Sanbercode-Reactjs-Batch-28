@@ -54,7 +54,7 @@ const ChangePassword = () => {
         <div className="wallpaper">
             <img src={front} alt="" className="gambar"/>
             <div className="gambartulisan">
-                <h1>Welcome,<br/>Login Here.</h1>
+                <h1 style={{fontSize: "55px"}}>Change<br/>Password Here.</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
             </div>
